@@ -14,7 +14,9 @@
   --app-sky: #8BC7E6;
   --app-rose: #E7837C;
   --app-black: #050907;
-  --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-stack-zh-hans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-stack-zh-hant: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang TC", "Heiti TC", "Microsoft JhengHei", sans-serif;
   --space-1: 0.5rem;
   --space-2: 0.75rem;
   --space-3: 1rem;
@@ -70,8 +72,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body:lang(zh-Hans),
+body:lang(zh-Hans) {
+  font-family: var(--font-stack-zh-hans);
+  line-height: 1.75;
+}
+
 body:lang(zh-Hant) {
+  font-family: var(--font-stack-zh-hant);
   line-height: 1.75;
 }
 
@@ -444,6 +451,16 @@ h2,
 h3 {
   line-height: 1.12;
   color: var(--app-ivory);
+  letter-spacing: -0.025em;
+}
+
+body:lang(zh-Hans) h1,
+body:lang(zh-Hant) h1,
+body:lang(zh-Hans) h2,
+body:lang(zh-Hant) h2,
+body:lang(zh-Hans) h3,
+body:lang(zh-Hant) h3 {
+  letter-spacing: 0.01em;
 }
 
 .hero h1 {
@@ -1082,7 +1099,7 @@ h3 {
 
 @media (max-width: 599px) {
   .product-visual {
-    width: min(100%, 340px);
+    width: min(100%, 360px);
     min-height: auto;
     gap: 1rem;
     margin-top: 3rem;
@@ -1103,11 +1120,20 @@ h3 {
   }
 
   .phone-shell {
-    width: min(100%, 246px);
+    width: min(100%, 260px);
   }
 
   .visual-caption {
     font-size: 0.82rem;
+  }
+
+  .hero-actions {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .button {
+    width: 100%;
   }
 }
 
