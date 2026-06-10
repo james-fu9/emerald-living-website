@@ -469,16 +469,31 @@ body:lang(zh-Hant) h3 {
   text-wrap: balance;
 }
 
+html[data-lang="zhHans"] .hero h1,
+html[data-lang="zhHant"] .hero h1,
 body:lang(zh-Hans) .hero h1,
 body:lang(zh-Hant) .hero h1 {
-  max-width: 22em;
+  max-width: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: max(0.75rem, 4vw);
+  font-size: clamp(1.5rem, 6.5vw, 2.65rem);
+  line-height: 1.45;
   overflow-wrap: normal;
+  word-break: keep-all;
+  text-wrap: pretty;
 }
 
+html[data-lang="zhHans"] .hero-lead,
+html[data-lang="zhHant"] .hero-lead,
 body:lang(zh-Hans) .hero-lead,
 body:lang(zh-Hant) .hero-lead {
-  max-width: 26em;
-  line-height: 1.82;
+  max-width: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: max(0.5rem, 3.5vw);
+  font-size: clamp(0.92rem, 3.6vw, 1.06rem);
+  line-height: 1.85;
 }
 
 body:lang(zh-Hans) .section-narrow h2,
@@ -973,32 +988,18 @@ body:lang(zh-Hant) .button {
     gap: 0.35rem;
   }
 
-  .hero h1 {
+  html:not([data-lang="zhHans"]):not([data-lang="zhHant"]) .hero h1 {
     max-width: 340px;
     font-size: 1.95rem;
   }
 
-  .hero-lead {
+  html:not([data-lang="zhHans"]):not([data-lang="zhHant"]) .hero-lead {
     max-width: 340px;
     font-size: 1rem;
   }
 
-  body:lang(zh-Hans) .hero h1,
-  body:lang(zh-Hant) .hero h1 {
-    max-width: 100%;
-    font-size: 1.82rem;
-    line-height: 1.4;
-  }
-
-  body:lang(zh-Hans) .hero-lead,
-  body:lang(zh-Hant) .hero-lead {
-    max-width: 100%;
-    font-size: 0.98rem;
-    padding: 0 0.25rem;
-  }
-
-  body:lang(zh-Hans) .hero-actions,
-  body:lang(zh-Hant) .hero-actions {
+  html[data-lang="zhHans"] .hero-actions,
+  html[data-lang="zhHant"] .hero-actions {
     width: 100%;
     padding: 0;
   }

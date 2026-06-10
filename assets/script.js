@@ -232,8 +232,8 @@
       },
       home: {
         eyebrow: '翡翠生活',
-        heroTitle: '营养与恢复，一处从容掌控',
-        heroLead: 'Smart Scan 快速记餐，追踪宏量营养，同步 Apple Health 恢复数据，汇聚在一个宁静的每日视图。',
+        heroTitle: '一眼看清今日健康',
+        heroLead: '拍照记餐，追踪营养，同步 Apple Health 恢复数据。今天吃得怎样、身体是否恢复到位，打开即可看见。',
         heroPrimary: 'App Store 即将上线',
         heroSecondary: '联系支持',
         visualPanelLeft: 'Apple Health',
@@ -250,10 +250,10 @@
         statusText: 'Emerald Living 仍在开发中，尚未在 App Store 公开发布。',
         disclaimerLabel: '健康与生活支持',
         disclaimerText: 'Emerald Living 用于一般健康与生活支持，不提供医疗建议、诊断或治疗。',
-        productTitle: '每日健康，从容可见',
-        productCopy: 'Emerald Living 以 Today 视图为核心，串联饮食热量、宏量目标、Apple Health 运动、穿戴恢复信号与个人目标，让健康更有秩序，而不是更多信息噪音。',
+        productTitle: '信息更少，判断更清楚',
+        productCopy: '热量、营养目标、Apple Health 运动、穿戴恢复信号与个人目标，都收进 Today 视图。不乱堆数据，只呈现你今天需要知道的事。',
         featuresLabel: '核心功能',
-        featuresTitle: '贴近真实应用体验',
+        featuresTitle: '来自真实产品的核心能力',
         featureRoutineTitle: '今日视图',
         featureRoutineCopy: '在一个界面里查看饮食、恢复、热量与宏量营养。',
         featureNutritionTitle: 'Smart Scan',
@@ -404,8 +404,8 @@
       },
       home: {
         eyebrow: '翡翠生活',
-        heroTitle: '營養與恢復，一處從容掌控',
-        heroLead: 'Smart Scan 快速記餐，追蹤宏量營養，同步 Apple Health 恢復資料，匯聚在一個寧靜的每日視圖。',
+        heroTitle: '一眼看清今日健康',
+        heroLead: '拍照記餐，追蹤營養，同步 Apple Health 恢復資料。今天吃得怎樣、身體是否恢復到位，打開即可看見。',
         heroPrimary: 'App Store 即將上線',
         heroSecondary: '聯絡支援',
         visualPanelLeft: 'Apple Health',
@@ -422,10 +422,10 @@
         statusText: 'Emerald Living 仍在開發中，尚未在 App Store 公開發布。',
         disclaimerLabel: '健康與生活支援',
         disclaimerText: 'Emerald Living 用於一般健康與生活支援，不提供醫療建議、診斷或治療。',
-        productTitle: '每日健康，從容可見',
-        productCopy: 'Emerald Living 以 Today 視圖為核心，串聯飲食熱量、宏量目標、Apple Health 運動、穿戴恢復信號與個人目標，讓健康更有秩序，而不是更多資訊噪音。',
+        productTitle: '資訊更少，判斷更清楚',
+        productCopy: '熱量、營養目標、Apple Health 運動、穿戴恢復信號與個人目標，都收進 Today 視圖。不亂堆資料，只呈現你今天需要知道的事。',
         featuresLabel: '核心功能',
-        featuresTitle: '貼近真實應用體驗',
+        featuresTitle: '來自真實產品的核心能力',
         featureRoutineTitle: '今日視圖',
         featureRoutineCopy: '在一個介面裡查看飲食、恢復、熱量與宏量營養。',
         featureNutritionTitle: 'Smart Scan',
@@ -651,6 +651,8 @@
     var metaDescription = document.querySelector('meta[name="description"]');
 
     document.documentElement.lang = htmlLang[currentLanguage];
+    document.documentElement.setAttribute('data-lang', currentLanguage);
+    document.body.setAttribute('lang', htmlLang[currentLanguage]);
     document.title = pageData[pageTitleKey] || fallbackPageData[pageTitleKey] || fallbackPageData.homeTitle;
     if (metaDescription) {
       metaDescription.setAttribute('content', pageData[pageDescriptionKey] || fallbackPageData[pageDescriptionKey] || fallbackPageData.homeDescription);
