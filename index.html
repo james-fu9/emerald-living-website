@@ -109,43 +109,97 @@
                   <div class="ui-avatar"></div>
                 </div>
 
-                <div class="ui-card ui-scan-card">
-                  <div class="ui-scan-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <rect x="3" y="8" width="18" height="12" rx="2"></rect>
-                      <path d="M7 8v-2a2 2 0 012-2h6a2 2 0 012 2v2"></path>
-                      <circle cx="12" cy="14" r="3"></circle>
-                    </svg>
+                <!-- Readiness Card -->
+                <div class="ui-card">
+                  <div class="ui-card-header">
+                    <div class="ui-card-titles">
+                      <strong data-i18n="home.uiReadinessTitle">Readiness</strong>
+                      <span data-i18n="home.uiReadinessSub">Sleep + HRV + resting HR</span>
+                    </div>
+                    <div class="ui-status-pill ui-status-mint" data-i18n="home.uiStatusOptimal">Optimal</div>
                   </div>
-                  <div class="ui-scan-text">
-                    <strong data-i18n="home.uiScanTitle">Smart Scan</strong>
-                    <span data-i18n="home.uiScanDesc">Tap to log meal with camera</span>
+                  <div class="ui-score-row">
+                    <span class="ui-score-large">85</span>
+                    <span class="ui-score-max">/100</span>
+                  </div>
+                  <div class="ui-rings-row">
+                    <div class="ui-ring-item">
+                      <div class="ui-ring-circle ui-ring-gold">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.1 3.2a8 8 0 1010.6 10.6 8.5 8.5 0 01-10.6-10.6z"/></svg>
+                      </div>
+                      <span data-i18n="home.uiSleep">Sleep</span>
+                    </div>
+                    <div class="ui-ring-item">
+                      <div class="ui-ring-circle ui-ring-mint">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                      </div>
+                      <span data-i18n="home.uiRecovery">Recovery</span>
+                    </div>
+                    <div class="ui-ring-item">
+                      <div class="ui-ring-circle ui-ring-sky">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 7.3V13h2V9.6l1.8-.7"/></svg>
+                      </div>
+                      <span data-i18n="home.uiActivity">Activity</span>
+                    </div>
                   </div>
                 </div>
 
+                <!-- Daily Nutrition Card -->
                 <div class="ui-card">
-                  <strong class="ui-card-title" data-i18n="home.uiMacrosTitle">Daily Macros</strong>
-                  <div class="ui-macro-row">
-                    <div class="ui-macro-label"><span data-i18n="home.uiProtein">Protein</span><span>120g</span></div>
-                    <div class="ui-progress"><div class="ui-bar ui-bar-protein" style="width: 75%"></div></div>
+                  <div class="ui-card-header">
+                    <div class="ui-card-titles">
+                      <strong data-i18n="home.uiNutritionTitle">Daily Nutrition</strong>
+                      <span data-i18n="home.uiNutritionSub">Base goal + activity = total.</span>
+                    </div>
                   </div>
-                  <div class="ui-macro-row">
-                    <div class="ui-macro-label"><span data-i18n="home.uiCarbs">Carbs</span><span>150g</span></div>
-                    <div class="ui-progress"><div class="ui-bar ui-bar-carbs" style="width: 45%"></div></div>
+                  <div class="ui-score-row">
+                    <span class="ui-score-large">1850</span>
+                    <span class="ui-score-max">/ 2400 kcal</span>
                   </div>
-                  <div class="ui-macro-row">
-                    <div class="ui-macro-label"><span data-i18n="home.uiFat">Fat</span><span>50g</span></div>
-                    <div class="ui-progress"><div class="ui-bar ui-bar-fat" style="width: 60%"></div></div>
+                  <div class="ui-progress">
+                    <div class="ui-bar ui-bar-mint" style="width: 77%"></div>
+                  </div>
+                  <div class="ui-budget-row">
+                    <div class="ui-budget-pill">
+                      <span data-i18n="home.uiBaseGoal">Base Goal</span>
+                      <strong>2000</strong>
+                    </div>
+                    <div class="ui-budget-pill">
+                      <span data-i18n="home.uiActivityGoal">Activity</span>
+                      <strong>+400</strong>
+                    </div>
+                    <div class="ui-budget-pill">
+                      <span data-i18n="home.uiTotalGoal">Total</span>
+                      <strong>2400</strong>
+                    </div>
                   </div>
                 </div>
 
-                <div class="ui-card">
-                  <strong class="ui-card-title" data-i18n="home.uiRecoveryTitle">Recovery</strong>
-                  <div class="ui-recovery-content">
-                    <div class="ui-ring"></div>
-                    <span data-i18n="home.uiRecoveryDesc">Optimal • HRV 65ms</span>
+                <!-- Meals Row -->
+                <div class="ui-meals-row">
+                  <div class="ui-meal-slot">
+                    <div class="ui-meal-icon ui-icon-mint">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5a.75.75 0 01.75.75v2.5a.75.75 0 01-1.5 0v-2.5a.75.75 0 01.75-.75zm4.95 2.8a.75.75 0 010 1.06l-1.77 1.77a.75.75 0 11-1.06-1.06l1.77-1.77a.75.75 0 011.06 0zM20.75 12a.75.75 0 01-.75.75h-2.5a.75.75 0 010-1.5h2.5a.75.75 0 01.75.75zm-3.8 4.95a.75.75 0 01-1.06 0l-1.77-1.77a.75.75 0 111.06-1.06l1.77 1.77a.75.75 0 010 1.06zM12 18.25a.75.75 0 01-.75.75v2.5a.75.75 0 011.5 0v-2.5a.75.75 0 01-.75-.75zM7.05 16.95a.75.75 0 010-1.06l1.77-1.77a.75.75 0 111.06 1.06l-1.77 1.77a.75.75 0 01-1.06 0zM3.25 12a.75.75 0 01.75-.75h2.5a.75.75 0 010 1.5h-2.5a.75.75 0 01-.75-.75zm2.8-4.95a.75.75 0 011.06 0l1.77 1.77a.75.75 0 11-1.06 1.06L5.05 8.11a.75.75 0 010-1.06zM12 7a5 5 0 100 10 5 5 0 000-10z"/></svg>
+                    </div>
+                    <span data-i18n="home.uiBreakfast">Breakfast</span>
+                    <small>450 kcal</small>
+                  </div>
+                  <div class="ui-meal-slot">
+                    <div class="ui-meal-icon ui-icon-mint">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 100 18 9 9 0 000-18zm0 16.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15z"/></svg>
+                    </div>
+                    <span data-i18n="home.uiLunch">Lunch</span>
+                    <small>820 kcal</small>
+                  </div>
+                  <div class="ui-meal-slot">
+                    <div class="ui-meal-icon ui-icon-mint">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 100 18 9 9 0 000-18zm0 16.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15z"/></svg>
+                    </div>
+                    <span data-i18n="home.uiDinner">Dinner</span>
+                    <small>—</small>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
