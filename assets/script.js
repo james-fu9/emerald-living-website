@@ -11,6 +11,11 @@
     zhHans: 'zh-Hans',
     zhHant: 'zh-Hant'
   };
+  var languageLabels = {
+    en: 'English',
+    zhHans: '简体中文',
+    zhHant: '繁體中文'
+  };
 
   var translations = {
     en: {
@@ -604,6 +609,31 @@
     toggle.setAttribute('aria-label', getNestedValue(translations[currentLanguage], 'nav.openMenu'));
   }
 
+  function closeLanguageDropdowns() {
+    document.querySelectorAll('[data-language-dropdown]').forEach(function (dropdown) {
+      var trigger = dropdown.querySelector('[data-language-trigger]');
+      var menu = dropdown.querySelector('[data-language-menu]');
+      dropdown.classList.remove('is-open');
+      if (trigger) {
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      if (menu) {
+        menu.hidden = true;
+      }
+    });
+  }
+
+  function updateLanguageDropdownState(language) {
+    document.querySelectorAll('[data-language-current]').forEach(function (node) {
+      node.textContent = languageLabels[language] || languageLabels.en;
+    });
+
+    document.querySelectorAll('[data-language-option]').forEach(function (option) {
+      var isSelected = option.getAttribute('data-language-option') === language;
+      option.setAttribute('aria-selected', String(isSelected));
+    });
+  }
+
   function applyLanguage(language) {
     currentLanguage = normalizeLanguage(language);
     var page = document.body.getAttribute('data-page') || 'home';
@@ -622,10 +652,7 @@
     setText('[data-i18n]', 'data-i18n', currentLanguage);
     setText('[data-i18n-html]', 'data-i18n-html', currentLanguage);
     setText('[data-i18n-aria-label]', 'data-i18n-aria-label', currentLanguage);
-
-    document.querySelectorAll('[data-language-select]').forEach(function (select) {
-      select.value = currentLanguage;
-    });
+    updateLanguageDropdownState(currentLanguage);
 
     try {
       localStorage.setItem(storageKey, currentLanguage);
@@ -654,15 +681,42 @@
     window.addEventListener('keydown', function (event) {
       if (event.key === 'Escape') {
         closeMenu();
+        closeLanguageDropdowns();
       }
     });
   }
 
-  document.querySelectorAll('[data-language-select]').forEach(function (select) {
-    select.addEventListener('change', function () {
-      applyLanguage(select.value);
-      closeMenu();
+  document.querySelectorAll('[data-language-dropdown]').forEach(function (dropdown) {
+    var trigger = dropdown.querySelector('[data-language-trigger]');
+    var menu = dropdown.querySelector('[data-language-menu]');
+
+    if (!trigger || !menu) {
+      return;
+    }
+
+    trigger.addEventListener('click', function () {
+      var willOpen = menu.hidden;
+      closeLanguageDropdowns();
+      if (willOpen) {
+        dropdown.classList.add('is-open');
+        trigger.setAttribute('aria-expanded', 'true');
+        menu.hidden = false;
+      }
     });
+
+    menu.querySelectorAll('[data-language-option]').forEach(function (option) {
+      option.addEventListener('click', function () {
+        applyLanguage(option.getAttribute('data-language-option'));
+        closeLanguageDropdowns();
+        closeMenu();
+      });
+    });
+  });
+
+  document.addEventListener('click', function (event) {
+    if (!event.target.closest('[data-language-dropdown]')) {
+      closeLanguageDropdowns();
+    }
   });
 
   applyLanguage(currentLanguage);

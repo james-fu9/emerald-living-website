@@ -28,23 +28,47 @@
       </nav>
 
       <div class="header-actions">
-        <div class="language-selector">
-          <span class="language-icon" aria-hidden="true">
-            <svg class="language-icon-svg" viewBox="0 0 24 24" focusable="false">
-              <circle cx="12" cy="12" r="8.5"></circle>
-              <path d="M3.5 12h17"></path>
-              <path d="M12 3.5c2.15 2.2 3.25 5.05 3.25 8.5s-1.1 6.3-3.25 8.5"></path>
-              <path d="M12 3.5c-2.15 2.2-3.25 5.05-3.25 8.5s1.1 6.3 3.25 8.5"></path>
-              <path d="M5.9 7.35h12.2"></path>
-              <path d="M5.9 16.65h12.2"></path>
-            </svg>
-          </span>
-          <span class="language-label" aria-hidden="true">Language</span>
-          <select class="language-select" aria-label="Language selector" data-language-select data-i18n-aria-label="common.languageSelector">
-            <option value="en">English</option>
-            <option value="zhHans">简体中文</option>
-            <option value="zhHant">繁體中文</option>
-          </select>
+        <div class="language-selector" data-language-dropdown>
+          <button type="button" class="language-trigger" aria-haspopup="listbox" aria-expanded="false" data-language-trigger data-i18n-aria-label="common.languageSelector">
+            <span class="language-icon" aria-hidden="true">
+              <svg class="language-icon-svg" viewBox="0 0 24 24" focusable="false">
+                <circle cx="12" cy="12" r="8.5"></circle>
+                <path d="M3.5 12h17"></path>
+                <path d="M12 3.5c2.15 2.2 3.25 5.05 3.25 8.5s-1.1 6.3-3.25 8.5"></path>
+                <path d="M12 3.5c-2.15 2.2-3.25 5.05-3.25 8.5s1.1 6.3 3.25 8.5"></path>
+                <path d="M5.9 7.35h12.2"></path>
+                <path d="M5.9 16.65h12.2"></path>
+              </svg>
+            </span>
+            <span class="language-current" data-language-current>English</span>
+            <span class="language-chevron" aria-hidden="true"></span>
+          </button>
+          <ul class="language-menu" role="listbox" hidden data-language-menu>
+            <li class="language-option">
+              <button type="button" role="option" data-language-option="en" aria-selected="true">
+                <svg class="language-check" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                  <path d="M3.5 8.5l2.4 2.4 5.4-5.4"></path>
+                </svg>
+                <span>English</span>
+              </button>
+            </li>
+            <li class="language-option">
+              <button type="button" role="option" data-language-option="zhHans" aria-selected="false">
+                <svg class="language-check" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                  <path d="M3.5 8.5l2.4 2.4 5.4-5.4"></path>
+                </svg>
+                <span>简体中文</span>
+              </button>
+            </li>
+            <li class="language-option">
+              <button type="button" role="option" data-language-option="zhHant" aria-selected="false">
+                <svg class="language-check" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                  <path d="M3.5 8.5l2.4 2.4 5.4-5.4"></path>
+                </svg>
+                <span>繁體中文</span>
+              </button>
+            </li>
+          </ul>
         </div>
         <a class="header-cta" href="./#status" data-i18n="nav.soon">Coming Soon</a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu" data-nav-toggle data-i18n-aria-label="nav.openMenu">
