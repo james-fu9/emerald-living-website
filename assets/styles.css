@@ -75,11 +75,15 @@ body {
 body:lang(zh-Hans) {
   font-family: var(--font-stack-zh-hans);
   line-height: 1.75;
+  word-break: keep-all;
+  line-break: strict;
 }
 
 body:lang(zh-Hant) {
   font-family: var(--font-stack-zh-hant);
   line-height: 1.75;
+  word-break: keep-all;
+  line-break: strict;
 }
 
 img {
@@ -461,6 +465,41 @@ body:lang(zh-Hant) h2,
 body:lang(zh-Hans) h3,
 body:lang(zh-Hant) h3 {
   letter-spacing: 0.01em;
+  line-height: 1.38;
+  text-wrap: balance;
+}
+
+body:lang(zh-Hans) .hero h1,
+body:lang(zh-Hant) .hero h1 {
+  max-width: 22em;
+  overflow-wrap: normal;
+}
+
+body:lang(zh-Hans) .hero-lead,
+body:lang(zh-Hant) .hero-lead {
+  max-width: 26em;
+  line-height: 1.82;
+}
+
+body:lang(zh-Hans) .section-narrow h2,
+body:lang(zh-Hant) .section-narrow h2,
+body:lang(zh-Hans) .section-heading h2,
+body:lang(zh-Hant) .section-heading h2,
+body:lang(zh-Hans) .text-panel h2,
+body:lang(zh-Hant) .text-panel h2,
+body:lang(zh-Hans) .contact-panel h2,
+body:lang(zh-Hant) .contact-panel h2 {
+  max-width: 24em;
+}
+
+body:lang(zh-Hans) .feature-card h3,
+body:lang(zh-Hant) .feature-card h3 {
+  line-height: 1.42;
+}
+
+body:lang(zh-Hans) .button,
+body:lang(zh-Hant) .button {
+  line-height: 1.45;
 }
 
 .hero h1 {
@@ -942,6 +981,26 @@ body:lang(zh-Hant) h3 {
   .hero-lead {
     max-width: 340px;
     font-size: 1rem;
+  }
+
+  body:lang(zh-Hans) .hero h1,
+  body:lang(zh-Hant) .hero h1 {
+    max-width: 100%;
+    font-size: 1.82rem;
+    line-height: 1.4;
+  }
+
+  body:lang(zh-Hans) .hero-lead,
+  body:lang(zh-Hant) .hero-lead {
+    max-width: 100%;
+    font-size: 0.98rem;
+    padding: 0 0.25rem;
+  }
+
+  body:lang(zh-Hans) .hero-actions,
+  body:lang(zh-Hant) .hero-actions {
+    width: 100%;
+    padding: 0;
   }
 
   .hero-actions {
