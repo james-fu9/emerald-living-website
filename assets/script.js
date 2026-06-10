@@ -65,23 +65,15 @@
         heroPrimary: 'Coming Soon on the App Store',
         heroSecondary: 'Contact support',
         visualPanelLeft: 'Apple Health',
+        visualHealth: 'Movement, wearable, and scale signals',
+        visualPanelScan: 'Smart Scan',
+        visualScanCopy: 'Camera-first meal logging',
         visualPanelRight: 'Personal baseline',
-        uiToday: 'Today',
-        uiReadinessTitle: 'Readiness',
-        uiReadinessSub: 'Sleep + HRV + resting HR',
-        uiStatusOptimal: 'Optimal',
-        uiSleep: 'Sleep',
-        uiRecovery: 'Recovery',
-        uiActivity: 'Activity',
-        uiNutritionTitle: 'Daily Nutrition',
-        uiNutritionSub: 'Base goal + activity = total.',
-        uiBaseGoal: 'Base Goal',
-        uiActivityGoal: 'Activity',
-        uiTotalGoal: 'Total',
-        uiBreakfast: 'Breakfast',
-        uiLunch: 'Lunch',
-        uiDinner: 'Dinner',
-        visualCaption: 'Illustrative preview only.',
+        visualRecovery: 'Sleep, HRV, resting HR',
+        visualPanelMacros: 'Macro targets',
+        visualMacrosCopy: 'Protein, carbs, and fat in context',
+        screenshotAlt: 'EmeraldLiving Today view showing readiness score, sleep, recovery, activity load, and daily nutrition',
+        visualCaption: 'Actual app interface. Pre-release preview.',
         statusLabel: 'Current status',
         statusText: 'EmeraldLiving is currently in development and is not yet publicly released for the App Store.',
         disclaimerLabel: 'General wellness focus',
@@ -245,23 +237,15 @@
         heroPrimary: '即将在 App Store 推出',
         heroSecondary: '联系支持',
         visualPanelLeft: 'Apple Health',
+        visualHealth: '运动、穿戴与体重秤信号',
+        visualPanelScan: 'Smart Scan',
+        visualScanCopy: '相机优先的餐食记录',
         visualPanelRight: '个人基线',
-        uiToday: '今天',
-        uiReadinessTitle: '恢复状态',
-        uiReadinessSub: '睡眠 + HRV + 静息心率',
-        uiStatusOptimal: '理想',
-        uiSleep: '睡眠',
-        uiRecovery: '恢复',
-        uiActivity: '活动',
-        uiNutritionTitle: '每日营养',
-        uiNutritionSub: '基础目标 + 活动 = 总量',
-        uiBaseGoal: '基础目标',
-        uiActivityGoal: '活动',
-        uiTotalGoal: '总量',
-        uiBreakfast: '早餐',
-        uiLunch: '午餐',
-        uiDinner: '晚餐',
-        visualCaption: '仅为示意预览。',
+        visualRecovery: '睡眠、HRV、静息心率',
+        visualPanelMacros: '宏量营养目标',
+        visualMacrosCopy: '蛋白质、碳水与脂肪一目了然',
+        screenshotAlt: 'EmeraldLiving 今日视图，展示恢复状态评分、睡眠、恢复、活动负荷与每日营养',
+        visualCaption: '真实应用界面。预发布版本预览。',
         statusLabel: '当前状态',
         statusText: 'Emerald Living 目前仍在开发中，尚未面向 App Store 公开发布。',
         disclaimerLabel: '一般健康支持',
@@ -425,23 +409,15 @@
         heroPrimary: '即將在 App Store 推出',
         heroSecondary: '聯絡支援',
         visualPanelLeft: 'Apple Health',
+        visualHealth: '運動、穿戴與體重秤信號',
+        visualPanelScan: 'Smart Scan',
+        visualScanCopy: '相機優先的餐食記錄',
         visualPanelRight: '個人基線',
-        uiToday: '今天',
-        uiReadinessTitle: '恢復狀態',
-        uiReadinessSub: '睡眠 + HRV + 靜息心率',
-        uiStatusOptimal: '理想',
-        uiSleep: '睡眠',
-        uiRecovery: '恢復',
-        uiActivity: '活動',
-        uiNutritionTitle: '每日營養',
-        uiNutritionSub: '基礎目標 + 活動 = 總量',
-        uiBaseGoal: '基礎目標',
-        uiActivityGoal: '活動',
-        uiTotalGoal: '總量',
-        uiBreakfast: '早餐',
-        uiLunch: '午餐',
-        uiDinner: '晚餐',
-        visualCaption: '僅為示意預覽。',
+        visualRecovery: '睡眠、HRV、靜息心率',
+        visualPanelMacros: '宏量營養目標',
+        visualMacrosCopy: '蛋白質、碳水與脂肪一目了然',
+        screenshotAlt: 'EmeraldLiving 今日視圖，展示恢復狀態評分、睡眠、恢復、活動負荷與每日營養',
+        visualCaption: '真實應用介面。預發布版本預覽。',
         statusLabel: '目前狀態',
         statusText: 'Emerald Living 目前仍在開發中，尚未面向 App Store 公開發布。',
         disclaimerLabel: '一般健康支援',
@@ -643,6 +619,28 @@
     });
   }
 
+  var screenshotSources = {
+    en: 'assets/app-today-en.png',
+    zhHans: 'assets/app-today-zh-hans.png',
+    zhHant: 'assets/app-today-zh-hant.png'
+  };
+
+  function updateAppScreenshots(language) {
+    document.querySelectorAll('[data-app-screenshot]').forEach(function (img) {
+      var source = screenshotSources[language] || screenshotSources.en;
+      if (img.getAttribute('src') !== source) {
+        img.setAttribute('src', source);
+      }
+      var altKey = img.getAttribute('data-i18n-alt');
+      if (altKey) {
+        var altValue = getNestedValue(translations[language], altKey) || getNestedValue(translations.en, altKey);
+        if (typeof altValue === 'string') {
+          img.setAttribute('alt', altValue);
+        }
+      }
+    });
+  }
+
   function applyLanguage(language) {
     currentLanguage = normalizeLanguage(language);
     var page = document.body.getAttribute('data-page') || 'home';
@@ -662,6 +660,7 @@
     setText('[data-i18n-html]', 'data-i18n-html', currentLanguage);
     setText('[data-i18n-aria-label]', 'data-i18n-aria-label', currentLanguage);
     updateLanguageDropdownState(currentLanguage);
+    updateAppScreenshots(currentLanguage);
 
     try {
       localStorage.setItem(storageKey, currentLanguage);
