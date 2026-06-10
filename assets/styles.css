@@ -558,45 +558,149 @@ h3 {
     var(--app-background);
 }
 
-.screen-header {
-  min-height: 38px;
+.css-ui-demo {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.6rem;
-  margin-bottom: 0.8rem;
-  color: var(--app-ivory);
-  font-size: 0.78rem;
-  font-weight: 780;
+  flex-direction: column;
+  gap: 0.8rem;
+  height: 100%;
 }
 
-.mini-card {
-  display: grid;
-  grid-template-columns: 32px minmax(0, 1fr);
+.ui-header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.68rem;
-  min-height: 58px;
-  margin-bottom: 0.68rem;
-  padding: 0.7rem;
-  border: 1px solid var(--app-border);
-  border-radius: var(--radius);
-  background: var(--app-surface);
+  margin-bottom: 0.2rem;
+}
+
+.ui-greeting {
+  font-size: 1.1rem;
+  font-weight: 700;
   color: var(--app-ivory);
+}
+
+.ui-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--app-primary), var(--app-primary-deep));
+}
+
+.ui-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 0.85rem;
   text-align: left;
 }
 
-.mini-card strong {
-  min-width: 0;
-  overflow-wrap: anywhere;
-  font-size: 0.88rem;
-  line-height: 1.25;
+.ui-scan-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, rgba(60, 179, 113, 0.15), rgba(14, 91, 59, 0.1));
+  border-color: rgba(60, 179, 113, 0.3);
 }
 
-.mini-card-muted {
-  background: rgba(60, 179, 113, 0.1);
+.ui-scan-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--app-primary);
+  color: var(--app-background);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
 }
 
-.mini-icon,
+.ui-scan-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.ui-scan-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.ui-scan-text strong {
+  font-size: 0.9rem;
+  color: var(--app-ivory);
+  line-height: 1.2;
+}
+
+.ui-scan-text span {
+  font-size: 0.75rem;
+  color: var(--app-mint);
+  margin-top: 0.1rem;
+}
+
+.ui-card-title {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--app-muted);
+  margin-bottom: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ui-macro-row {
+  margin-bottom: 0.55rem;
+}
+
+.ui-macro-row:last-child {
+  margin-bottom: 0;
+}
+
+.ui-macro-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--app-ivory);
+  margin-bottom: 0.25rem;
+}
+
+.ui-macro-label span:last-child {
+  font-weight: 600;
+}
+
+.ui-progress {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.ui-bar {
+  height: 100%;
+  border-radius: 99px;
+}
+
+.ui-bar-protein { background: var(--app-primary); }
+.ui-bar-carbs { background: var(--app-sky); }
+.ui-bar-fat { background: var(--app-warning); }
+
+.ui-recovery-content {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.ui-ring {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 3px solid var(--app-primary);
+  border-top-color: rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.ui-recovery-content span {
+  font-size: 0.85rem;
+  color: var(--app-ivory);
+  font-weight: 600;
+}
+
 .feature-mark {
   display: inline-block;
   width: 28px;
@@ -605,17 +709,14 @@ h3 {
   background: linear-gradient(135deg, var(--app-primary), var(--app-primary-deep));
 }
 
-.mini-icon-warm,
 .feature-mark-warm {
   background: linear-gradient(135deg, var(--app-warning), var(--app-gold));
 }
 
-.mini-icon-blue,
 .feature-mark-blue {
   background: linear-gradient(135deg, var(--app-sky), #4D8FB0);
 }
 
-.mini-icon-dark,
 .feature-mark-dark {
   background: linear-gradient(135deg, var(--app-rose), #9B4F4A);
 }
