@@ -525,24 +525,34 @@ body:lang(zh-Hant) h3 {
 
 .product-visual {
   width: 100%;
-  margin: 3.5rem auto 0;
+  margin: 4rem auto 0;
 }
 
-.visual-grid {
+.phone-stage {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: var(--space-4);
+  padding: 1.5rem 1rem 0.5rem;
 }
 
-.visual-side {
-  display: grid;
-  gap: var(--space-3);
-  width: min(100%, 360px);
+.phone-glow {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  width: min(92vw, 440px);
+  height: min(72vw, 520px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(80, 200, 120, 0.2) 0%, rgba(16, 28, 22, 0) 72%);
+  filter: blur(48px);
+  pointer-events: none;
+  transform: translateX(-50%);
 }
 
 .phone-shell {
-  width: min(72vw, 290px);
+  position: relative;
+  z-index: 1;
+  width: min(68vw, 300px);
   padding: 0.55rem;
   border-radius: 46px;
   background: linear-gradient(160deg, #2A3B32, #0A1410 58%, #1C2B23);
@@ -580,68 +590,8 @@ body:lang(zh-Hant) h3 {
   background: linear-gradient(135deg, var(--app-rose), #9B4F4A);
 }
 
-.visual-panel {
-  padding: 1.05rem;
-  border: 1px solid var(--app-border);
-  border-radius: var(--radius);
-  background: rgba(16, 28, 22, 0.9);
-  box-shadow: var(--shadow-card);
-  text-align: left;
-}
-
-.visual-panel strong {
-  display: block;
-  margin: 0.3rem 0 0.8rem;
-  color: var(--app-ivory);
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-.progress-line {
-  height: 8px;
-  overflow: hidden;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.progress-line span {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
-  background: var(--app-primary);
-}
-
-.signal-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  align-items: end;
-  gap: 0.35rem;
-  height: 42px;
-}
-
-.signal-row span {
-  border-radius: 999px;
-  background: linear-gradient(180deg, var(--app-mint), var(--app-primary));
-}
-
-.signal-row span:nth-child(1) {
-  height: 50%;
-}
-
-.signal-row span:nth-child(2) {
-  height: 78%;
-}
-
-.signal-row span:nth-child(3) {
-  height: 62%;
-}
-
-.signal-row span:nth-child(4) {
-  height: 88%;
-}
-
 .visual-caption {
-  margin: var(--space-4) 0 0;
+  margin: var(--space-5) 0 0;
   color: var(--app-muted);
   font-size: 0.85rem;
   text-align: center;
@@ -654,7 +604,7 @@ body:lang(zh-Hant) h3 {
 }
 
 .status-section {
-  padding: 2.5rem 0;
+  padding: 3.5rem 0;
   border-top: 1px solid var(--app-border);
   border-bottom: 1px solid var(--app-border);
 }
@@ -928,12 +878,13 @@ body:lang(zh-Hant) h3 {
     margin-top: 3rem;
   }
 
-  .visual-side {
-    display: none;
+  .phone-shell {
+    width: min(76vw, 280px);
   }
 
-  .phone-shell {
-    width: min(78vw, 280px);
+  .phone-glow {
+    width: min(88vw, 360px);
+    height: min(64vw, 440px);
   }
 
   .visual-caption {
@@ -1102,33 +1053,11 @@ body:lang(zh-Hant) h3 {
   }
 
   .product-visual {
-    margin-top: 4.5rem;
-  }
-
-  .visual-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-    align-items: center;
-    gap: var(--space-5);
-    width: min(100%, 1020px);
-    margin: 0 auto;
-  }
-
-  .visual-side {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .visual-side-left {
-    justify-self: end;
-  }
-
-  .visual-side-right {
-    justify-self: start;
+    margin-top: 5rem;
   }
 
   .phone-shell {
-    width: 322px;
+    width: 340px;
   }
 
   .content-section {
