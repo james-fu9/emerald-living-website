@@ -29,7 +29,7 @@ Then visit `http://localhost:8000` in your browser.
 5. Branch: **main**.
 6. Folder: **/root**.
 7. Save.
-8. Custom domain: `www.myemeraldlife.com`.
+8. Custom domain: `www.myemeraldliving.com`.
 9. Enable **Enforce HTTPS** after certificate is issued.
 
 ## Cloudflare DNS instructions
@@ -52,4 +52,4 @@ Then visit `http://localhost:8000` in your browser.
 - Proxy status: DNS only
 - TTL: Auto
 
-**Important:** Do not change or delete existing Cloudflare Email Routing MX/TXT records because `support@myemeraldlife.com` and `contact@myemeraldlife.com` depend on them.
+**Important:** Do not change or delete existing Cloudflare Email Routing MX/TXT records because `support@myemeraldliving.com` and `contact@myemeraldliving.com` depend on them.

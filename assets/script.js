@@ -104,8 +104,8 @@
         healthLink: 'Read the Health Disclaimer',
         contactLabel: 'Contact',
         contactTitle: 'EmeraldLife is currently in development.',
-        contactSupport: 'For support or product questions, contact <a href="mailto:support@myemeraldlife.com">support@myemeraldlife.com</a>.',
-        contactGeneral: 'For general, privacy, legal, or business questions, contact <a href="mailto:contact@myemeraldlife.com">contact@myemeraldlife.com</a>.'
+        contactSupport: 'For support or product questions, contact <a href="mailto:support@myemeraldliving.com">support@myemeraldliving.com</a>.',
+        contactGeneral: 'For general, privacy, legal, or business questions, contact <a href="mailto:contact@myemeraldliving.com">contact@myemeraldliving.com</a>.'
       },
       privacy: {
         title: 'Privacy Policy',
@@ -130,7 +130,7 @@
         s9Title: '9. Changes to this policy',
         s9Copy: 'We may update this policy as EmeraldLife moves toward public launch. Updated versions will be posted on this page with a revised effective date when appropriate.',
         s10Title: '10. Contact us',
-        s10Copy: 'For privacy questions, contact <a href="mailto:contact@myemeraldlife.com">contact@myemeraldlife.com</a>.'
+        s10Copy: 'For privacy questions, contact <a href="mailto:contact@myemeraldliving.com">contact@myemeraldliving.com</a>.'
       },
       terms: {
         title: 'Terms of Use',
@@ -155,7 +155,7 @@
         s9Title: '9. Changes to these terms',
         s9Copy: 'We may update these terms from time to time. Updated terms will be posted on this page with a revised effective date when appropriate.',
         s10Title: '10. Contact',
-        s10Copy: 'For legal, privacy, or general questions, contact <a href="mailto:contact@myemeraldlife.com">contact@myemeraldlife.com</a>.'
+        s10Copy: 'For legal, privacy, or general questions, contact <a href="mailto:contact@myemeraldliving.com">contact@myemeraldliving.com</a>.'
       },
       health: {
         title: 'Health Disclaimer',
@@ -165,12 +165,12 @@
         p3: 'Users should consult qualified healthcare professionals with medical questions.',
         p4: 'Users should not disregard professional medical advice because of information from EmeraldLife.',
         emergency: 'If you think you may have a medical emergency, contact local emergency services immediately.',
-        contact: 'For support questions, contact <a href="mailto:support@myemeraldlife.com">support@myemeraldlife.com</a>.'
+        contact: 'For support questions, contact <a href="mailto:support@myemeraldliving.com">support@myemeraldliving.com</a>.'
       },
       support: {
         title: 'Need help?',
-        supportEmail: 'Support email: <a href="mailto:support@myemeraldlife.com">support@myemeraldlife.com</a>',
-        generalEmail: 'General, privacy, legal, and business contact: <a href="mailto:contact@myemeraldlife.com">contact@myemeraldlife.com</a>',
+        supportEmail: 'Support email: <a href="mailto:support@myemeraldliving.com">support@myemeraldliving.com</a>',
+        generalEmail: 'General, privacy, legal, and business contact: <a href="mailto:contact@myemeraldliving.com">contact@myemeraldliving.com</a>',
         status: 'EmeraldLife is currently in development and not yet publicly released for the App Store.',
         faqTitle: 'FAQ',
         q1: 'Is EmeraldLife available now?',
@@ -178,9 +178,9 @@
         q2: 'Is EmeraldLife a medical app?',
         a2: 'No. EmeraldLife is intended for general wellness and lifestyle support. It does not provide medical advice, diagnosis, or treatment.',
         q3: 'How can I contact support?',
-        a3: 'You can email <a href="mailto:support@myemeraldlife.com">support@myemeraldlife.com</a>.',
+        a3: 'You can email <a href="mailto:support@myemeraldliving.com">support@myemeraldliving.com</a>.',
         q4: 'How can I contact the team for privacy, legal, or general questions?',
-        a4: 'You can email <a href="mailto:contact@myemeraldlife.com">contact@myemeraldlife.com</a>.',
+        a4: 'You can email <a href="mailto:contact@myemeraldliving.com">contact@myemeraldliving.com</a>.',
         q5: 'Where can I read the privacy policy?',
         a5: 'Read the <a href="privacy.html">Privacy Policy</a>.'
       },
@@ -276,8 +276,8 @@
         healthLink: '阅读健康声明',
         contactLabel: '联系我们',
         contactTitle: 'EmeraldLife 仍在开发中',
-        contactSupport: '产品与支持：<a href="mailto:support@myemeraldlife.com">support@myemeraldlife.com</a>',
-        contactGeneral: '隐私、法律与商务：<a href="mailto:contact@myemeraldlife.com">contact@myemeraldlife.com</a>'
+        contactSupport: '产品与支持：<a href="mailto:support@myemeraldliving.com">support@myemeraldliving.com</a>',
+        contactGeneral: '隐私、法律与商务：<a href="mailto:contact@myemeraldliving.com">contact@myemeraldliving.com</a>'
       },
       privacy: {
         title: '隐私政策',
@@ -302,7 +302,7 @@
         s9Title: '9. 本政策的变更',
         s9Copy: '随着 EmeraldLife 推进公开发布，我们可能会更新本政策。更新版本将在本页面发布，并在适当时修订生效日期。',
         s10Title: '10. 联系我们',
-        s10Copy: '如有隐私问题，请联系 <a href="mailto:contact@myemeraldlife.com">contact@myemeraldlife.com</a>。'
+        s10Copy: '如有隐私问题，请联系 <a href="mailto:contact@myemeraldliving.com">contact@myemeraldliving.com</a>。'
       },
       terms: {
         title: '使用条款',
@@ -327,7 +327,7 @@
         s9Title: '9. 条款变更',
         s9Copy: '我们可能不时更新本条款。更新后的条款将在本页面发布，并在适当时修订生效日期。',
         s10Title: '10. 联系',
-        s10Copy: '如有法律、隐私或一般问题，请联系 <a href="mailto:contact@myemeraldlife.com">contact@myemeraldlife.com</a>。'
+        s10Copy: '如有法律、隐私或一般问题，请联系 <a href="mailto:contact@myemeraldliving.com">contact@myemeraldliving.com</a>。'
       },
       health: {
         title: '健康免责声明',
@@ -337,12 +337,12 @@
         p3: '如有医疗问题，用户应咨询合格的医疗专业人士。',
         p4: '用户不应因为 EmeraldLife 提供的信息而忽视专业医疗建议。',
         emergency: '如果你认为自己可能出现医疗紧急情况，请立即联系当地紧急服务。',
-        contact: '如有支持问题，请联系 <a href="mailto:support@myemeraldlife.com">support@myemeraldlife.com</a>。'
+        contact: '如有支持问题，请联系 <a href="mailto:support@myemeraldliving.com">support@myemeraldliving.com</a>。'
       },
       support: {
         title: '需要帮助？',
-        supportEmail: '支持：<a href="mailto:support@myemeraldlife.com">support@myemeraldlife.com</a>',
-        generalEmail: '隐私、法律与商务：<a href="mailto:contact@myemeraldlife.com">contact@myemeraldlife.com</a>',
+        supportEmail: '支持：<a href="mailto:support@myemeraldliving.com">support@myemeraldliving.com</a>',
+        generalEmail: '隐私、法律与商务：<a href="mailto:contact@myemeraldliving.com">contact@myemeraldliving.com</a>',
         status: 'EmeraldLife 目前正在开发中，尚未面向 App Store 公开发布。',
         faqTitle: '常见问题',
         q1: 'EmeraldLife 现在可以使用吗？',
@@ -350,9 +350,9 @@
         q2: 'EmeraldLife 是医疗应用吗？',
         a2: '不是。EmeraldLife 面向一般健康与生活方式支持，不提供医疗建议、诊断或治疗。',
         q3: '如何联系支持？',
-        a3: '你可以发送邮件至 <a href="mailto:support@myemeraldlife.com">support@myemeraldlife.com</a>。',
+        a3: '你可以发送邮件至 <a href="mailto:support@myemeraldliving.com">support@myemeraldliving.com</a>。',
         q4: '如何就隐私、法律或一般问题联系团队？',
-        a4: '你可以发送邮件至 <a href="mailto:contact@myemeraldlife.com">contact@myemeraldlife.com</a>。',
+        a4: '你可以发送邮件至 <a href="mailto:contact@myemeraldliving.com">contact@myemeraldliving.com</a>。',
         q5: '在哪里可以阅读隐私政策？',
         a5: '阅读<a href="privacy.html">隐私政策</a>。'
       },
@@ -448,8 +448,8 @@
         healthLink: '閱讀健康聲明',
         contactLabel: '聯絡我們',
         contactTitle: 'EmeraldLife 仍在開發中',
-        contactSupport: '產品與支援：<a href="mailto:support@myemeraldlife.com">support@myemeraldlife.com</a>',
-        contactGeneral: '隱私、法律與商務：<a href="mailto:contact@myemeraldlife.com">contact@myemeraldlife.com</a>'
+        contactSupport: '產品與支援：<a href="mailto:support@myemeraldliving.com">support@myemeraldliving.com</a>',
+        contactGeneral: '隱私、法律與商務：<a href="mailto:contact@myemeraldliving.com">contact@myemeraldliving.com</a>'
       },
       privacy: {
         title: '隱私政策',
@@ -474,7 +474,7 @@
         s9Title: '9. 本政策的變更',
         s9Copy: '隨著 EmeraldLife 推進公開發布，我們可能會更新本政策。更新版本將在本頁面發布，並在適當時修訂生效日期。',
         s10Title: '10. 聯絡我們',
-        s10Copy: '如有隱私問題，請聯絡 <a href="mailto:contact@myemeraldlife.com">contact@myemeraldlife.com</a>。'
+        s10Copy: '如有隱私問題，請聯絡 <a href="mailto:contact@myemeraldliving.com">contact@myemeraldliving.com</a>。'
       },
       terms: {
         title: '使用條款',
@@ -499,7 +499,7 @@
         s9Title: '9. 條款變更',
         s9Copy: '我們可能不時更新本條款。更新後的條款將在本頁面發布，並在適當時修訂生效日期。',
         s10Title: '10. 聯絡',
-        s10Copy: '如有法律、隱私或一般問題，請聯絡 <a href="mailto:contact@myemeraldlife.com">contact@myemeraldlife.com</a>。'
+        s10Copy: '如有法律、隱私或一般問題，請聯絡 <a href="mailto:contact@myemeraldliving.com">contact@myemeraldliving.com</a>。'
       },
       health: {
         title: '健康免責聲明',
@@ -509,12 +509,12 @@
         p3: '如有醫療問題，用戶應諮詢合格的醫療專業人士。',
         p4: '用戶不應因為 EmeraldLife 提供的資訊而忽視專業醫療建議。',
         emergency: '如果你認為自己可能出現醫療緊急情況，請立即聯絡當地緊急服務。',
-        contact: '如有支援問題，請聯絡 <a href="mailto:support@myemeraldlife.com">support@myemeraldlife.com</a>。'
+        contact: '如有支援問題，請聯絡 <a href="mailto:support@myemeraldliving.com">support@myemeraldliving.com</a>。'
       },
       support: {
         title: '需要幫助？',
-        supportEmail: '支援：<a href="mailto:support@myemeraldlife.com">support@myemeraldlife.com</a>',
-        generalEmail: '隱私、法律與商務：<a href="mailto:contact@myemeraldlife.com">contact@myemeraldlife.com</a>',
+        supportEmail: '支援：<a href="mailto:support@myemeraldliving.com">support@myemeraldliving.com</a>',
+        generalEmail: '隱私、法律與商務：<a href="mailto:contact@myemeraldliving.com">contact@myemeraldliving.com</a>',
         status: 'EmeraldLife 目前正在開發中，尚未面向 App Store 公開發布。',
         faqTitle: '常見問題',
         q1: 'EmeraldLife 現在可以使用嗎？',
@@ -522,9 +522,9 @@
         q2: 'EmeraldLife 是醫療應用嗎？',
         a2: '不是。EmeraldLife 面向一般健康與生活方式支援，不提供醫療建議、診斷或治療。',
         q3: '如何聯絡支援？',
-        a3: '你可以傳送郵件至 <a href="mailto:support@myemeraldlife.com">support@myemeraldlife.com</a>。',
+        a3: '你可以傳送郵件至 <a href="mailto:support@myemeraldliving.com">support@myemeraldliving.com</a>。',
         q4: '如何就隱私、法律或一般問題聯絡團隊？',
-        a4: '你可以傳送郵件至 <a href="mailto:contact@myemeraldlife.com">contact@myemeraldlife.com</a>。',
+        a4: '你可以傳送郵件至 <a href="mailto:contact@myemeraldliving.com">contact@myemeraldliving.com</a>。',
         q5: '在哪裡可以閱讀隱私政策？',
         a5: '閱讀<a href="privacy.html">隱私政策</a>。'
       },
