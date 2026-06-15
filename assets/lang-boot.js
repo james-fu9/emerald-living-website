@@ -1,5 +1,5 @@
 (function () {
-  var storageKey = 'emeraldLivingLanguage';
+  var storageKey = 'emeraldLifeLanguage';
   var htmlLang = { en: 'en', zhHans: 'zh-Hans', zhHant: 'zh-Hant' };
 
   function normalize(value) {
