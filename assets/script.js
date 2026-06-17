@@ -4,7 +4,7 @@
     window.history.replaceState(null, '', cleanPath + window.location.search + window.location.hash);
   }
 
-  var storageKey = 'emeraldLifeLanguage';
+  var sessionKey = 'emeraldLifeSessionLanguage';
   var supportedLanguages = ['en', 'zhHans', 'zhHant'];
   var htmlLang = {
     en: 'en',
@@ -557,11 +557,22 @@
     return 'en';
   }
 
+  function browserLanguage() {
+    var language = '';
+    if (navigator.languages && navigator.languages.length) {
+      language = navigator.languages[0];
+    }
+    if (!language) {
+      language = navigator.language || navigator.userLanguage || '';
+    }
+    return normalizeLanguage(language);
+  }
+
   function detectLanguage() {
     try {
-      return normalizeLanguage(localStorage.getItem(storageKey) || navigator.language || 'en');
+      return normalizeLanguage(sessionStorage.getItem(sessionKey) || browserLanguage());
     } catch (error) {
-      return normalizeLanguage(navigator.language || 'en');
+      return browserLanguage();
     }
   }
 
@@ -641,7 +652,7 @@
     });
   }
 
-  function applyLanguage(language) {
+  function applyLanguage(language, rememberSelection) {
     currentLanguage = normalizeLanguage(language);
     var page = document.body.getAttribute('data-page') || 'home';
     var pageTitleKey = page + 'Title';
@@ -664,9 +675,11 @@
     updateLanguageDropdownState(currentLanguage);
     updateAppScreenshots(currentLanguage);
 
-    try {
-      localStorage.setItem(storageKey, currentLanguage);
-    } catch (error) {
+    if (rememberSelection) {
+      try {
+        sessionStorage.setItem(sessionKey, currentLanguage);
+      } catch (error) {
+      }
     }
   }
 
@@ -716,7 +729,7 @@
 
     menu.querySelectorAll('[data-language-option]').forEach(function (option) {
       option.addEventListener('click', function () {
-        applyLanguage(option.getAttribute('data-language-option'));
+        applyLanguage(option.getAttribute('data-language-option'), true);
         closeLanguageDropdowns();
         closeMenu();
       });
@@ -729,5 +742,5 @@
     }
   });
 
-  applyLanguage(currentLanguage);
+  applyLanguage(currentLanguage, false);
 })();

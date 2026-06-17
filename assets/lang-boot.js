@@ -1,5 +1,5 @@
 (function () {
-  var storageKey = 'emeraldLifeLanguage';
+  var sessionKey = 'emeraldLifeSessionLanguage';
   var htmlLang = { en: 'en', zhHans: 'zh-Hans', zhHant: 'zh-Hant' };
 
   function normalize(value) {
@@ -18,8 +18,27 @@
     return 'en';
   }
 
+  function browserLanguage() {
+    var language = '';
+    if (navigator.languages && navigator.languages.length) {
+      language = navigator.languages[0];
+    }
+    if (!language) {
+      language = navigator.language || navigator.userLanguage || '';
+    }
+    return normalize(language);
+  }
+
+  function initialLanguage() {
+    try {
+      return normalize(sessionStorage.getItem(sessionKey) || browserLanguage());
+    } catch (error) {
+      return browserLanguage();
+    }
+  }
+
   try {
-    var lang = normalize(localStorage.getItem(storageKey) || navigator.language || 'en');
+    var lang = initialLanguage();
     document.documentElement.lang = htmlLang[lang];
     document.documentElement.setAttribute('data-lang', lang);
   } catch (error) {}
