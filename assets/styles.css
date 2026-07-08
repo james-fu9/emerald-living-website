@@ -455,7 +455,7 @@ h2,
 h3 {
   line-height: 1.12;
   color: var(--app-ivory);
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
 }
 
 body:lang(zh-Hans) h1,
@@ -464,7 +464,7 @@ body:lang(zh-Hans) h2,
 body:lang(zh-Hant) h2,
 body:lang(zh-Hans) h3,
 body:lang(zh-Hant) h3 {
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
   line-height: 1.38;
   text-wrap: balance;
 }
@@ -479,8 +479,8 @@ body:lang(zh-Hant) .hero h1 {
   padding-inline: max(0.75rem, 4vw);
   font-size: clamp(1.5rem, 6.5vw, 2.65rem);
   line-height: 1.45;
-  overflow-wrap: normal;
-  word-break: keep-all;
+  overflow-wrap: anywhere;
+  word-break: normal;
   text-wrap: pretty;
 }
 
@@ -505,6 +505,8 @@ body:lang(zh-Hant) .text-panel h2,
 body:lang(zh-Hans) .contact-panel h2,
 body:lang(zh-Hant) .contact-panel h2 {
   max-width: 24em;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 body:lang(zh-Hans) .feature-card h3,
@@ -582,46 +584,89 @@ body:lang(zh-Hant) .button {
   margin: 4rem auto 0;
 }
 
-.phone-stage {
+.companion-preview {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  display: grid;
+  gap: var(--space-3);
+  text-align: left;
+}
+
+.preview-card {
   position: relative;
+  overflow: hidden;
+  border: 1px solid var(--app-border);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(23, 38, 31, 0.96), rgba(11, 22, 17, 0.96)),
+    var(--app-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.turtle-card {
+  padding: 1.4rem;
+}
+
+.ai-card,
+.friends-card {
+  padding: 1.2rem;
+}
+
+.turtle-state {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 1.5rem 1rem 0.5rem;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
 }
 
-.phone-glow {
-  position: absolute;
-  top: 12%;
-  left: 50%;
-  width: min(92vw, 440px);
-  height: min(72vw, 520px);
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(80, 200, 120, 0.2) 0%, rgba(16, 28, 22, 0) 72%);
-  filter: blur(48px);
-  pointer-events: none;
-  transform: translateX(-50%);
+.preview-logo {
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.38), var(--shadow-glow);
 }
 
-.phone-shell {
-  position: relative;
-  z-index: 1;
-  width: min(68vw, 300px);
-  padding: 0.55rem;
-  border-radius: 46px;
-  background: linear-gradient(160deg, #2A3B32, #0A1410 58%, #1C2B23);
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.07),
-    0 40px 80px rgba(0, 0, 0, 0.52),
-    var(--shadow-glow);
-}
-
-.phone-screenshot {
+.turtle-state strong,
+.turtle-state span,
+.ritual-row span,
+.ritual-row p,
+.preview-card p {
   display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 38px;
-  background: var(--app-background);
+}
+
+.turtle-state strong {
+  color: var(--app-ivory);
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.turtle-state span,
+.preview-card p {
+  color: var(--app-muted);
+}
+
+.turtle-state span {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.ritual-row {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--app-border);
+}
+
+.ritual-row span {
+  color: var(--app-mint);
+  font-size: 0.78rem;
+  font-weight: 780;
+  text-transform: uppercase;
+}
+
+.ritual-row p,
+.preview-card p {
+  margin: 0.35rem 0 0;
 }
 
 .feature-mark {
@@ -932,13 +977,14 @@ body:lang(zh-Hant) .button {
     margin-top: 3rem;
   }
 
-  .phone-shell {
-    width: min(76vw, 280px);
+  .turtle-state {
+    align-items: flex-start;
   }
 
-  .phone-glow {
-    width: min(88vw, 360px);
-    height: min(64vw, 440px);
+  .preview-logo {
+    width: 56px;
+    height: 56px;
+    flex-basis: 56px;
   }
 
   .visual-caption {
@@ -1116,8 +1162,13 @@ body:lang(zh-Hant) .button {
     margin-top: 5rem;
   }
 
-  .phone-shell {
-    width: 340px;
+  .companion-preview {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: stretch;
+  }
+
+  .turtle-card {
+    grid-row: span 2;
   }
 
   .content-section {

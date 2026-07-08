@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EmeraldLife | Coming Soon</title>
-  <meta name="description" content="EmeraldLife is a pre-launch health and lifestyle app focused on sustainable routines, meaningful patterns, nutrition awareness, recovery, and overall wellbeing.">
+  <meta name="description" content="EmeraldLife is a pre-launch companion-led wellness app for one meaningful daily Ritual, AI reflection, and friends-only support.">
   <link rel="icon" type="image/png" href="assets/app-logo.png">
   <link rel="apple-touch-icon" href="assets/app-logo.png">
-  <link rel="stylesheet" href="assets/styles.css?v=20260616a">
-  <script src="assets/lang-boot.js?v=20260616a"></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20260708a">
+  <script src="assets/lang-boot.js?v=20260708a"></script>
 </head>
 <body data-page="home">
   <a class="skip-link" href="#main-content" data-i18n="common.skip">Skip to content</a>
@@ -85,28 +85,39 @@
       <div class="container hero-inner">
         <img class="hero-logo" src="assets/app-logo.png" width="112" height="112" alt="" aria-hidden="true">
         <p class="eyebrow" data-i18n="home.eyebrow">EmeraldLife</p>
-        <h1 data-i18n="home.heroTitle">Build a daily rhythm around food, movement, and progress.</h1>
-        <p class="hero-lead" data-i18n="home.heroLead">EmeraldLife brings nutrition, Smart Scan meal logging, Apple Health movement, wearable recovery signals, and progress context into one calm daily view.</p>
+        <h1 data-i18n="home.heroTitle">Companion-led wellness for meaningful daily living.</h1>
+        <p class="hero-lead" data-i18n="home.heroLead">EmeraldLife turns daily signals into one small Ritual, AI reflection, and optional close-friend support without calorie-first dashboards, public rankings, or shame.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#status" data-i18n="home.heroPrimary">Coming Soon on the App Store</a>
           <a class="button button-secondary" href="support.html" data-i18n="home.heroSecondary">Contact support</a>
         </div>
 
         <div class="product-visual">
-          <div class="phone-stage">
-            <div class="phone-glow" aria-hidden="true"></div>
-            <div class="phone-shell">
-              <img
-                class="phone-screenshot"
-                src="assets/app-today-en.png"
-                width="506"
-                height="1100"
-                alt="EmeraldLife Today view showing readiness score, sleep, recovery, activity load, and daily nutrition"
-                data-app-screenshot
-                data-i18n-alt="home.screenshotAlt">
+          <div class="companion-preview" aria-label="EmeraldLife companion-led wellness preview" data-i18n-aria-label="home.previewAria">
+            <div class="preview-card turtle-card">
+              <p class="panel-kicker" data-i18n="home.previewKicker">Today with EmeraldLife</p>
+              <div class="turtle-state">
+                <img class="preview-logo" src="assets/app-logo.png" width="64" height="64" alt="" aria-hidden="true">
+                <div>
+                  <strong data-i18n="home.previewState">Your companion is calm and ready.</strong>
+                  <span data-i18n="home.previewCue">A gentle day, one useful step.</span>
+                </div>
+              </div>
+              <div class="ritual-row">
+                <span data-i18n="home.previewRitualLabel">Today's Ritual</span>
+                <p data-i18n="home.previewRitual">Take a short reset walk and write one sentence about what would make today meaningful.</p>
+              </div>
+            </div>
+            <div class="preview-card ai-card">
+              <p class="panel-kicker" data-i18n="home.previewAiLabel">AI Companion</p>
+              <p data-i18n="home.previewAi">"Let's keep this light. Finish the Ritual first, then we can reflect."</p>
+            </div>
+            <div class="preview-card friends-card">
+              <p class="panel-kicker" data-i18n="home.previewFriendsLabel">What's On</p>
+              <p data-i18n="home.previewFriends">Friends can react to Ritual moments. No leaderboards. No public comparison.</p>
             </div>
           </div>
-          <p class="visual-caption" data-i18n="home.visualCaption">Actual app interface. Pre-release preview.</p>
+          <p class="visual-caption" data-i18n="home.visualCaption">Concept preview based on the MVP PRD.</p>
         </div>
       </div>
     </section>
@@ -118,8 +129,8 @@
           <p data-i18n="home.statusText">EmeraldLife is currently in development and is not yet publicly released for the App Store.</p>
         </article>
         <article class="notice-card">
-          <span class="notice-label" data-i18n="home.disclaimerLabel">General wellness focus</span>
-          <p data-i18n="home.disclaimerText">EmeraldLife is designed for general wellness and lifestyle support. It does not provide medical advice, diagnosis, or treatment.</p>
+          <span class="notice-label" data-i18n="home.disclaimerLabel">Consumer wellness only</span>
+          <p data-i18n="home.disclaimerText">EmeraldLife is designed for adults 18+ as a consumer wellness companion. It does not provide medical advice, diagnosis, treatment, or emergency services.</p>
         </article>
       </div>
     </section>
@@ -127,8 +138,8 @@
     <section id="product" class="content-section">
       <div class="container section-narrow">
         <p class="section-label" data-i18n="nav.product">Product</p>
-        <h2 data-i18n="home.productTitle">A calmer command center for daily health context.</h2>
-        <p data-i18n="home.productCopy">EmeraldLife is being built around a Today view that connects food calories, macro targets, Apple Health movement, wearable recovery signals, and profile-based goals without turning wellness into noise.</p>
+        <h2 data-i18n="home.productTitle">Built around one meaningful daily action.</h2>
+        <p data-i18n="home.productCopy">The MVP loop is simple: companion state, one Ritual, AI reflection, optional friend encouragement, and Profile trends. Body Energy, Recovery, Readiness, and Happiness guide the experience without turning Home into a score dashboard.</p>
       </div>
     </section>
 
@@ -141,33 +152,33 @@
         <div class="feature-grid">
           <article class="feature-card">
             <span class="feature-mark"></span>
-            <h3 data-i18n="home.featureRoutineTitle">Today view</h3>
-            <p data-i18n="home.featureRoutineCopy">Review food, recovery, calories, and macros from one focused daily surface.</p>
+            <h3 data-i18n="home.featureRoutineTitle">Home and Ritual</h3>
+            <p data-i18n="home.featureRoutineCopy">A calm companion state and one small Ritual give the first session a clear, meaningful action.</p>
           </article>
           <article class="feature-card">
             <span class="feature-mark feature-mark-warm"></span>
-            <h3 data-i18n="home.featureNutritionTitle">Smart Scan</h3>
-            <p data-i18n="home.featureNutritionCopy">Log meals with a camera-first flow and keep nutrition context connected to your daily targets.</p>
+            <h3 data-i18n="home.featureNutritionTitle">AI Companion</h3>
+            <p data-i18n="home.featureNutritionCopy">Selectable tones support check-ins, Ritual coaching, reflection, and next-step suggestions without medical claims.</p>
           </article>
           <article class="feature-card">
             <span class="feature-mark feature-mark-blue"></span>
-            <h3 data-i18n="home.featureHabitTitle">Macro targets</h3>
-            <p data-i18n="home.featureHabitCopy">Keep protein, carbs, and fat visible with profile-based targets and clear daily context.</p>
+            <h3 data-i18n="home.featureHabitTitle">What's On</h3>
+            <p data-i18n="home.featureHabitCopy">Friends-only Ritual shares, reactions, and encouragement keep support private and low pressure.</p>
           </article>
           <article class="feature-card">
             <span class="feature-mark feature-mark-dark"></span>
-            <h3 data-i18n="home.featureRecoveryTitle">Readiness and HRV</h3>
-            <p data-i18n="home.featureRecoveryCopy">Review sleep, resting heart rate, and HRV against your personal baseline when supported wearable data is available.</p>
+            <h3 data-i18n="home.featureRecoveryTitle">Profile trends</h3>
+            <p data-i18n="home.featureRecoveryCopy">Wellness bands, streak history, privacy, language, notifications, and companion tone live in Profile.</p>
           </article>
           <article class="feature-card">
             <span class="feature-mark"></span>
-            <h3 data-i18n="home.featureReflectionTitle">Fitness load</h3>
-            <p data-i18n="home.featureReflectionCopy">Connect movement, steps, active energy, and workouts into a practical training context.</p>
+            <h3 data-i18n="home.featureReflectionTitle">Algorithm-backed states</h3>
+            <p data-i18n="home.featureReflectionCopy">Body Energy, Recovery, Readiness, and Happiness shape the companion state, Ritual pacing, and AI tone.</p>
           </article>
           <article class="feature-card">
             <span class="feature-mark feature-mark-warm"></span>
-            <h3 data-i18n="home.featureInsightTitle">Profile settings</h3>
-            <p data-i18n="home.featureInsightCopy">Shape calorie estimates, macro split, reminders, units, and health access preferences.</p>
+            <h3 data-i18n="home.featureInsightTitle">Launch localization</h3>
+            <p data-i18n="home.featureInsightCopy">The app is planned for English, Chinese, Spanish, French, German, Portuguese, Japanese, Korean, and Italian launch support.</p>
           </article>
         </div>
       </div>
@@ -219,6 +230,6 @@
     </div>
   </footer>
 
-  <script src="assets/script.js?v=20260616a"></script>
+  <script src="assets/script.js?v=20260708a"></script>
 </body>
 </html>
