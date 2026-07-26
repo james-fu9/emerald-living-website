@@ -18,6 +18,18 @@
     ko: 'ko',
     it: 'it'
   };
+  var openGraphLocale = {
+    en: 'en_US',
+    zhHans: 'zh_CN',
+    zhHant: 'zh_TW',
+    es: 'es_ES',
+    fr: 'fr_FR',
+    de: 'de_DE',
+    pt: 'pt_BR',
+    ja: 'ja_JP',
+    ko: 'ko_KR',
+    it: 'it_IT'
+  };
   var languageLabels = {
     en: 'English',
     zhHans: '简体中文',
@@ -48,7 +60,7 @@
         privacy: 'Privacy',
         terms: 'Terms',
         support: 'Support',
-        soon: 'Coming Soon',
+        soon: 'In Development',
         openMenu: 'Open menu',
         closeMenu: 'Close menu'
       },
@@ -90,7 +102,7 @@
         previewFriends: 'Friends can react to Ritual moments. No leaderboards. No public comparison.',
         visualCaption: 'An early look at the EmeraldLife daily loop.',
         statusLabel: 'Building now',
-        statusText: 'EmeraldLife is in pre-MVP development for an iOS-first, US-first beta.',
+        statusText: 'EmeraldLife is in development for an iOS beta, beginning in the United States.',
         disclaimerLabel: 'Wellness, not medical care',
         disclaimerText: 'EmeraldLife is designed for adults 18+ as a consumer wellness companion. It does not provide medical advice, diagnosis, treatment, or emergency services.',
         productTitle: 'Less tracking. More companionship.',
@@ -190,10 +202,10 @@
         title: 'Need help?',
         supportEmail: 'Support email: <a href="mailto:support@myemeraldliving.com">support@myemeraldliving.com</a>',
         generalEmail: 'General, privacy, legal, and business contact: <a href="mailto:contact@myemeraldliving.com">contact@myemeraldliving.com</a>',
-        status: 'EmeraldLife is currently in pre-MVP development and is not yet publicly released for the App Store.',
+        status: 'EmeraldLife is currently in development and is not yet available on the App Store.',
         faqTitle: 'FAQ',
         q1: 'Is EmeraldLife available now?',
-        a1: 'Not yet. EmeraldLife is in pre-MVP development for an iOS-first, US-first beta.',
+        a1: 'Not yet. We are building toward an iOS beta, beginning in the United States.',
         q2: 'Is EmeraldLife a medical app?',
         a2: 'No. EmeraldLife is a consumer wellness companion for adults 18+. It does not provide medical advice, diagnosis, treatment, or emergency services.',
         q3: 'How can I contact support?',
@@ -225,7 +237,7 @@
         privacy: '隐私',
         terms: '条款',
         support: '支持',
-        soon: '即将推出',
+        soon: '开发中',
         openMenu: '打开菜单',
         closeMenu: '关闭菜单'
       },
@@ -267,7 +279,7 @@
         previewFriends: '好友可以为 Ritual 时刻回应。不做排行榜，不做公开比较。',
         visualCaption: '提前感受 EmeraldLife 的每日核心体验。',
         statusLabel: '正在打造',
-        statusText: 'EmeraldLife 正处于 Pre-MVP 开发阶段，首先面向美国推出 iOS beta 版本。',
+        statusText: 'EmeraldLife 正在开发中，首个 iOS 测试版本将从美国开始。',
         disclaimerLabel: '健康陪伴，而非医疗服务',
         disclaimerText: 'EmeraldLife 面向 18 岁及以上用户，提供消费级健康陪伴；不提供医疗建议、诊断、治疗或紧急服务。',
         productTitle: '少一点记录，多一点陪伴',
@@ -367,10 +379,10 @@
         title: '需要帮助？',
         supportEmail: '支持：<a href="mailto:support@myemeraldliving.com">support@myemeraldliving.com</a>',
         generalEmail: '隐私、法律与商务：<a href="mailto:contact@myemeraldliving.com">contact@myemeraldliving.com</a>',
-        status: 'EmeraldLife 目前处于 Pre-MVP 开发阶段，尚未面向 App Store 公开发布。',
+        status: 'EmeraldLife 目前正在开发中，尚未在 App Store 上线。',
         faqTitle: '常见问题',
         q1: 'EmeraldLife 现在可以使用吗？',
-        a1: '还不可以。EmeraldLife 正在为 iOS 优先、美国优先的 beta 版本进行 Pre-MVP 开发。',
+        a1: '还不可以。我们正在准备首个 iOS 测试版本，并将从美国开始。',
         q2: 'EmeraldLife 是医疗应用吗？',
         a2: '不是。EmeraldLife 是面向 18 岁及以上用户的消费级健康陪伴产品，不提供医疗建议、诊断、治疗或急救服务。',
         q3: '如何联系支持？',
@@ -402,7 +414,7 @@
         privacy: '隱私',
         terms: '條款',
         support: '支援',
-        soon: '即將推出',
+        soon: '開發中',
         openMenu: '開啟選單',
         closeMenu: '關閉選單'
       },
@@ -444,7 +456,7 @@
         previewFriends: '好友可以為 Ritual 時刻回應。不做排行榜，不做公開比較。',
         visualCaption: '提前感受 EmeraldLife 的每日核心體驗。',
         statusLabel: '正在打造',
-        statusText: 'EmeraldLife 正處於 Pre-MVP 開發階段，首先面向美國推出 iOS beta 版本。',
+        statusText: 'EmeraldLife 正在開發中，首個 iOS 測試版本將從美國開始。',
         disclaimerLabel: '健康陪伴，而非醫療服務',
         disclaimerText: 'EmeraldLife 面向 18 歲及以上用戶，提供消費級健康陪伴；不提供醫療建議、診斷、治療或緊急服務。',
         productTitle: '少一點記錄，多一點陪伴',
@@ -544,10 +556,10 @@
         title: '需要幫助？',
         supportEmail: '支援：<a href="mailto:support@myemeraldliving.com">support@myemeraldliving.com</a>',
         generalEmail: '隱私、法律與商務：<a href="mailto:contact@myemeraldliving.com">contact@myemeraldliving.com</a>',
-        status: 'EmeraldLife 目前處於 Pre-MVP 開發階段，尚未面向 App Store 公開發布。',
+        status: 'EmeraldLife 目前正在開發中，尚未在 App Store 上線。',
         faqTitle: '常見問題',
         q1: 'EmeraldLife 現在可以使用嗎？',
-        a1: '還不可以。EmeraldLife 正在為 iOS 優先、美國優先的 beta 版本進行 Pre-MVP 開發。',
+        a1: '還不可以。我們正在準備首個 iOS 測試版本，並將從美國開始。',
         q2: 'EmeraldLife 是醫療應用嗎？',
         a2: '不是。EmeraldLife 是面向 18 歲及以上用戶的消費級健康陪伴產品，不提供醫療建議、診斷、治療或急救服務。',
         q3: '如何聯絡支援？',
@@ -717,14 +729,31 @@
     var pageDescriptionKey = page + 'Description';
     var pageData = translations[currentLanguage].pages;
     var fallbackPageData = translations.en.pages;
-    var metaDescription = document.querySelector('meta[name="description"]');
+    var pageTitle = pageData[pageTitleKey] || fallbackPageData[pageTitleKey] || fallbackPageData.homeTitle;
+    var pageDescription = pageData[pageDescriptionKey] || fallbackPageData[pageDescriptionKey] || fallbackPageData.homeDescription;
 
     document.documentElement.lang = htmlLang[currentLanguage];
     document.documentElement.setAttribute('data-lang', currentLanguage);
     document.body.setAttribute('lang', htmlLang[currentLanguage]);
-    document.title = pageData[pageTitleKey] || fallbackPageData[pageTitleKey] || fallbackPageData.homeTitle;
-    if (metaDescription) {
-      metaDescription.setAttribute('content', pageData[pageDescriptionKey] || fallbackPageData[pageDescriptionKey] || fallbackPageData.homeDescription);
+    document.title = pageTitle;
+    [
+      'meta[name="description"]',
+      'meta[property="og:description"]',
+      'meta[name="twitter:description"]'
+    ].forEach(function (selector) {
+      var node = document.querySelector(selector);
+      if (node) node.setAttribute('content', pageDescription);
+    });
+    [
+      'meta[property="og:title"]',
+      'meta[name="twitter:title"]'
+    ].forEach(function (selector) {
+      var node = document.querySelector(selector);
+      if (node) node.setAttribute('content', pageTitle);
+    });
+    var localeMeta = document.querySelector('meta[property="og:locale"]');
+    if (localeMeta) {
+      localeMeta.setAttribute('content', openGraphLocale[currentLanguage]);
     }
 
     setText('[data-i18n]', 'data-i18n', currentLanguage);

@@ -9,8 +9,12 @@ Static GitHub Pages landing website for EmeraldLife.
 - `health-disclaimer.html` - Health Disclaimer
 - `support.html` - Support & FAQ
 - `404.html` - Page not found
+- `robots.txt` - Search crawler rules and sitemap discovery
+- `sitemap.xml` - Canonical public page index
 - `assets/styles.css` - Main stylesheet
-- `assets/script.js` - Minimal vanilla JavaScript (navigation, language switching)
+- `assets/script.js` - Vanilla JavaScript for navigation, localization, and localized metadata
+- `assets/translations-extra.js` - Spanish, French, German, Portuguese, Japanese, Korean, and Italian translations
+- `assets/lang-boot.js` - Browser-language detection before the page renders
 - `CNAME` - Custom domain configuration
 
 ## Local preview
