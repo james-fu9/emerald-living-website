@@ -5,7 +5,7 @@
   }
 
   var sessionKey = 'emeraldLifeSessionLanguage';
-  var supportedLanguages = ['en', 'zhHans', 'zhHant', 'es', 'fr', 'de', 'pt', 'ja', 'ko', 'it'];
+  var supportedLanguages = ['de', 'en', 'es', 'fr', 'it', 'pt', 'ko', 'ja', 'zhHans', 'zhHant'];
   var htmlLang = {
     en: 'en',
     zhHans: 'zh-Hans',
@@ -700,8 +700,11 @@
   function ensureLanguageOptions() {
     document.querySelectorAll('[data-language-menu]').forEach(function (menu) {
       supportedLanguages.forEach(function (language) {
-        if (!menu.querySelector('[data-language-option="' + language + '"]')) {
+        var option = menu.querySelector('[data-language-option="' + language + '"]');
+        if (!option) {
           menu.appendChild(createLanguageOption(language));
+        } else {
+          menu.appendChild(option.parentNode);
         }
       });
     });

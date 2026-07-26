@@ -14,7 +14,7 @@
   };
 
   function normalize(value) {
-    var supported = ['en', 'zhHans', 'zhHant', 'es', 'fr', 'de', 'pt', 'ja', 'ko', 'it'];
+    var supported = ['de', 'en', 'es', 'fr', 'it', 'pt', 'ko', 'ja', 'zhHans', 'zhHant'];
     if (supported.indexOf(value) !== -1) {
       return value;
     }
