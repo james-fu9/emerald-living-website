@@ -5,16 +5,30 @@
   }
 
   var sessionKey = 'emeraldLifeSessionLanguage';
-  var supportedLanguages = ['en', 'zhHans', 'zhHant'];
+  var supportedLanguages = ['en', 'zhHans', 'zhHant', 'es', 'fr', 'de', 'pt', 'ja', 'ko', 'it'];
   var htmlLang = {
     en: 'en',
     zhHans: 'zh-Hans',
-    zhHant: 'zh-Hant'
+    zhHant: 'zh-Hant',
+    es: 'es',
+    fr: 'fr',
+    de: 'de',
+    pt: 'pt-BR',
+    ja: 'ja',
+    ko: 'ko',
+    it: 'it'
   };
   var languageLabels = {
     en: 'English',
     zhHans: '简体中文',
-    zhHant: '繁體中文'
+    zhHant: '繁體中文',
+    es: 'Español',
+    fr: 'Français',
+    de: 'Deutsch',
+    pt: 'Português',
+    ja: '日本語',
+    ko: '한국어',
+    it: 'Italiano'
   };
 
   var translations = {
@@ -551,6 +565,11 @@
     }
   };
 
+  var additionalTranslations = window.EmeraldLifeAdditionalTranslations || {};
+  Object.keys(additionalTranslations).forEach(function (language) {
+    translations[language] = additionalTranslations[language];
+  });
+
   function getNestedValue(source, path) {
     return path.split('.').reduce(function (value, key) {
       return value && value[key];
@@ -569,6 +588,13 @@
     if (language.indexOf('zh-hans') === 0 || language.indexOf('zh-cn') === 0 || language.indexOf('zh-sg') === 0 || language === 'zh') {
       return 'zhHans';
     }
+    if (language.indexOf('es') === 0) return 'es';
+    if (language.indexOf('fr') === 0) return 'fr';
+    if (language.indexOf('de') === 0) return 'de';
+    if (language.indexOf('pt') === 0) return 'pt';
+    if (language.indexOf('ja') === 0) return 'ja';
+    if (language.indexOf('ko') === 0) return 'ko';
+    if (language.indexOf('it') === 0) return 'it';
     return 'en';
   }
 
@@ -645,6 +671,42 @@
     });
   }
 
+  function createLanguageOption(language) {
+    var item = document.createElement('li');
+    var button = document.createElement('button');
+    var check = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    var label = document.createElement('span');
+
+    item.className = 'language-option';
+    button.type = 'button';
+    button.setAttribute('role', 'option');
+    button.setAttribute('data-language-option', language);
+    button.setAttribute('aria-selected', 'false');
+    check.setAttribute('class', 'language-check');
+    check.setAttribute('viewBox', '0 0 16 16');
+    check.setAttribute('aria-hidden', 'true');
+    check.setAttribute('focusable', 'false');
+    path.setAttribute('d', 'M3.5 8.5l2.4 2.4 5.4-5.4');
+    label.textContent = languageLabels[language];
+
+    check.appendChild(path);
+    button.appendChild(check);
+    button.appendChild(label);
+    item.appendChild(button);
+    return item;
+  }
+
+  function ensureLanguageOptions() {
+    document.querySelectorAll('[data-language-menu]').forEach(function (menu) {
+      supportedLanguages.forEach(function (language) {
+        if (!menu.querySelector('[data-language-option="' + language + '"]')) {
+          menu.appendChild(createLanguageOption(language));
+        }
+      });
+    });
+  }
+
   function applyLanguage(language, rememberSelection) {
     currentLanguage = normalizeLanguage(language);
     var page = document.body.getAttribute('data-page') || 'home';
@@ -678,6 +740,8 @@
   var currentLanguage = detectLanguage();
   var nav = document.querySelector('[data-primary-nav]');
   var toggle = document.querySelector('[data-nav-toggle]');
+
+  ensureLanguageOptions();
 
   if (toggle && nav) {
     toggle.addEventListener('click', function () {

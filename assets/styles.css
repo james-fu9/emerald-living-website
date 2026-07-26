@@ -17,6 +17,8 @@
   --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-stack-zh-hans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   --font-stack-zh-hant: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang TC", "Heiti TC", "Microsoft JhengHei", sans-serif;
+  --font-stack-ja: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  --font-stack-ko: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
   --space-1: 0.5rem;
   --space-2: 0.75rem;
   --space-3: 1rem;
@@ -84,6 +86,31 @@ body:lang(zh-Hant) {
   line-height: 1.75;
   word-break: normal;
   line-break: strict;
+}
+
+body:lang(ja) {
+  font-family: var(--font-stack-ja);
+  line-height: 1.75;
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+body:lang(ja) .preview-card p {
+  padding-right: 0.5rem;
+  word-break: break-all;
+  line-break: anywhere;
+}
+
+body:lang(ko) {
+  font-family: var(--font-stack-ko);
+  line-height: 1.72;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+body:lang(de) .document-header h1 {
+  overflow-wrap: anywhere;
 }
 
 img {
@@ -303,6 +330,9 @@ button {
   border-radius: var(--radius);
   background: rgba(16, 28, 22, 0.98);
   box-shadow: var(--shadow-card);
+  max-height: min(70vh, 460px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .language-menu[hidden] {
