@@ -75,14 +75,14 @@ body {
 body:lang(zh-Hans) {
   font-family: var(--font-stack-zh-hans);
   line-height: 1.75;
-  word-break: keep-all;
+  word-break: normal;
   line-break: strict;
 }
 
 body:lang(zh-Hant) {
   font-family: var(--font-stack-zh-hant);
   line-height: 1.75;
-  word-break: keep-all;
+  word-break: normal;
   line-break: strict;
 }
 
@@ -697,6 +697,7 @@ body:lang(zh-Hant) .button {
 }
 
 .status-section,
+.story-section,
 .feature-section,
 .contact-section {
   background: rgba(255, 255, 255, 0.02);
@@ -765,12 +766,51 @@ body:lang(zh-Hant) .button {
 }
 
 .section-narrow p:last-child,
+.story-copy p:last-child,
 .text-panel p:last-child,
 .contact-panel p:last-child,
 .document-content p:last-child,
 .faq-item p:last-child,
 .not-found-panel p:last-child {
   margin-bottom: 0;
+}
+
+.story-section {
+  border-top: 1px solid var(--app-border);
+  border-bottom: 1px solid var(--app-border);
+}
+
+.story-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+}
+
+.story-layout > * {
+  min-width: 0;
+}
+
+.story-layout h2 {
+  max-width: 720px;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 740;
+}
+
+.story-copy {
+  max-width: 680px;
+}
+
+.story-copy p {
+  color: var(--app-muted);
+}
+
+body:lang(zh-Hans) .story-layout h2,
+body:lang(zh-Hant) .story-layout h2,
+body:lang(zh-Hans) .story-copy p,
+body:lang(zh-Hant) .story-copy p {
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 .section-heading {
@@ -1100,7 +1140,8 @@ body:lang(zh-Hant) .button {
   }
 
   .notice-grid,
-  .split-layout {
+  .split-layout,
+  .story-layout {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1145,21 +1186,21 @@ body:lang(zh-Hant) .button {
   }
 
   .hero {
-    padding: 6.5rem 0 5rem;
+    padding: 4.5rem 0;
   }
 
   .hero-logo {
-    width: 118px;
-    height: 118px;
-    border-radius: 30px;
+    width: 104px;
+    height: 104px;
+    border-radius: 26px;
   }
 
   .hero h1 {
-    font-size: 4rem;
+    font-size: 3.6rem;
   }
 
   .product-visual {
-    margin-top: 5rem;
+    margin-top: 3.25rem;
   }
 
   .companion-preview {
@@ -1177,6 +1218,7 @@ body:lang(zh-Hant) .button {
 
   .section-narrow h2,
   .section-heading h2,
+  .story-layout h2,
   .text-panel h2,
   .contact-panel h2,
   .document-header h1,
